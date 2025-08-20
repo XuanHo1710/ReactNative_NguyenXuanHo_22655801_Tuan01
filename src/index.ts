@@ -41,6 +41,27 @@ class Student extends Person {
     }
 }
 
-console.log(new Student("Karen Tamoza", 12, 8.5));
+// console.log(new Student("Karen Tamoza", 12, 8.5));
 
+// 3. Create a class Car with properties brand, model, year. Write a method to show car info.
+
+class Car {
+    brand: string;
+    model: string;
+    year: number;
+
+
+    constructor(brand: string, model: string, year: number) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+
+    }
+
+    showCar(): string {
+        return `Brand: ${this.brand}, Model: ${this.model},  Year: ${this.year}`;
+    }
+}
+
+console.log(new Car("Honda", "X23", 2002));
 
