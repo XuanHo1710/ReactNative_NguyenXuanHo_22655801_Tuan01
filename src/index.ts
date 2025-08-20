@@ -397,6 +397,18 @@ class MathUtil {
     }
 }
 
+// 19. Demonstrate method overriding using polymorphism with Animal and subclasses.
+class AnimalPolymorphism {
+    makeSound(animal: Animal): string {
+        if (animal instanceof Dog) {
+            return animal.bark();
+        } else if (animal instanceof Cat) {
+            return animal.meow();
+        }
+        return "Unknown animal sound.";
+    }
+}
+
 
 
 
