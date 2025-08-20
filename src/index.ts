@@ -91,9 +91,40 @@ class Rectangle {
 }
 
 const rectangle = new Rectangle(20, 15);
-console.log(rectangle.showRectangle());
-console.log("Area: " + rectangle.calculateArea());
-console.log("Perimeter: " + rectangle.calculatePerimeter());
+// console.log(rectangle.showRectangle());
+// console.log("Area: " + rectangle.calculateArea());
+// console.log("Perimeter: " + rectangle.calculatePerimeter());
+
+
+
+// Create a class BankAccount with balance. Add methods deposit() and withdraw().
+class BankAccount {
+    balance: number;
+
+    constructor(balance: number) {
+        this.balance = balance;
+    }
+
+    deposit(amount: number): void {
+        this.balance += amount;
+    }
+
+    withdraw(amount: number): void {
+        if (amount <= this.balance) {
+            this.balance -= amount;
+        } else {
+            console.log("Cannot withdraw more than the balance.");
+        }
+    }
+
+    showBalance(): number {
+        return this.balance;
+    }
+}
+const account = new BankAccount(1000);
+account.deposit(500);
+account.withdraw(200);
+console.log("Current Balance: " + account.showBalance());
 
 
 
