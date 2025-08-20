@@ -232,6 +232,39 @@ class Cat extends Animal {
 }
 
 
+// 12. Define interfaces Flyable and Swimmable. Implement them in Bird and Fish classes.
+interface Flyable {
+    fly(): string;
+}
+interface Swimmable {
+    swim(): string;
+}
+class Bird implements Flyable {
+    name: string;
+
+    constructor(name: string) {
+        this.name = name;
+    }
+
+    fly(): string {
+        return `${this.name} is flying!`;
+    }
+}
+
+class Fish implements Swimmable {
+    name: string;
+
+    constructor(name: string) {
+        this.name = name;
+    }
+
+    swim(): string {
+        return `${this.name} is swimming!`;
+    }
+}
+
+
+
 
 
 
