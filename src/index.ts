@@ -317,6 +317,28 @@ class Developer extends Employee {
     }
 }
 
+// 15. Create a Library class that can store Book and User objects. Add method to add books.
+class Library {
+    private books: Book[] = [];
+    private users: User[] = [];
+
+    addBook(book: Book): void {
+        this.books.push(book);
+    }
+
+    addUser(user: User): void {
+        this.users.push(user);
+    }
+
+    listBooks(): string {
+        return this.books.map(book => book.displayInfo()).join("\n");
+    }
+
+    listUsers(): string {
+        return this.users.map(user => user.getName()).join(", ");
+    }
+}
+
 
 
 
