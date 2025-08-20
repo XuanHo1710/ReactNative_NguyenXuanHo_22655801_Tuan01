@@ -21,6 +21,26 @@ class Person {
     }
 }
 
-console.log(new Person("Nguyen Xuan Ho", 25).displayInfo());
+// console.log(new Person("Nguyen Xuan Ho", 25).displayInfo());
+
+// 2. Write a class Student extending Person with an additional attribute grade. Add a method to
+// display all info.
+
+
+class Student extends Person {
+    grade: number;
+
+
+    constructor(name: string, age: number, grade: number) {
+        super(name, age);
+        this.grade = grade;
+    }
+
+    displayAllInfo(): string {
+        return `${super.displayInfo}, Age: ${this.grade}`;
+    }
+}
+
+console.log(new Student("Karen Tamoza", 12, 8.5));
 
 
