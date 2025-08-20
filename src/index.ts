@@ -188,7 +188,51 @@ class Book {
     }
 }
 const book = new Book("The Great Better Ever", "Xuan Ho", 2001);
-console.log(book.displayInfo());
+// console.log(book.displayInfo());
+
+// 9. Define an interface Animal with name and method sound().
+
+interface Animal {
+    name: string,
+    sound: () => string;
+}
+
+// 10. Create a class Account with public, private and readonly fields.
+class Account {
+    public name: string;
+    readonly balance: number;
+    private password: string;
+
+    constructor(name: string, balance: number, password: string) {
+        this.name = name;
+        this.balance = balance;
+        this.password = password;
+    }
+}
+
+
+
+// 11. Create a base class Animal. Extend Dog and Cat classes with methods bark() and meow().
+class Animal {
+    name: string;
+
+    constructor(name: string) {
+        this.name = name;
+    }
+}
+class Dog extends Animal {
+    bark(): string {
+        return `${this.name} says gau gau gau!`;
+    }
+}
+class Cat extends Animal {
+    meow(): string {
+        return `${this.name} says meow meow!`;
+    }
+}
+
+
+
 
 
 
