@@ -169,7 +169,27 @@ const products = [
     new Product("ETS", 100),
     new Product("Lecture", 500),
 ]
-console.log(getProductsGetterThan100(products));
+// console.log(getProductsGetterThan100(products));
+
+
+// 6. Create a class Book with attributes title, author, year.
+
+class Book {
+    title: string;
+    author: string;
+    year: number;
+    constructor(title: string, author: string, year: number) {
+        this.title = title;
+        this.author = author;
+        this.year = year;
+    }
+    displayInfo(): string {
+        return `Title: ${this.title}, Author: ${this.author}, Year: ${this.year}`;
+    }
+}
+const book = new Book("The Great Better Ever", "Xuan Ho", 2001);
+console.log(book.displayInfo());
+
 
 
 
