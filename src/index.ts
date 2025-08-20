@@ -2,7 +2,7 @@ function hello(name: string): string {
     return `Hello, ${name}!`;
 }
 
-console.log(hello("200Lab"));
+// console.log(hello("200Lab"));
 
 
 // 1. Create a class Person with attributes name and age. Write a method to display this information.
@@ -63,5 +63,38 @@ class Car {
     }
 }
 
-console.log(new Car("Honda", "X23", 2002));
+// console.log(new Car("Honda", "X23", 2002));
+
+
+// 4. Create a class Rectangle with width and height. Write a method to calculate area and perimeter.
+
+class Rectangle {
+    width: number;
+    height: number;
+
+    constructor(width: number, height: number) {
+        this.width = width;
+        this.height = height;
+    }
+
+    showRectangle(): string {
+        return `Width: ${this.width}, Height: ${this.height}`;
+    }
+
+    calculateArea(): number {
+        return this.width * this.height;
+    }
+
+    calculatePerimeter(): number {
+        return (this.width + this.height) * 2
+    }
+}
+
+const rectangle = new Rectangle(20, 15);
+console.log(rectangle.showRectangle());
+console.log("Area: " + rectangle.calculateArea());
+console.log("Perimeter: " + rectangle.calculatePerimeter());
+
+
+
 
