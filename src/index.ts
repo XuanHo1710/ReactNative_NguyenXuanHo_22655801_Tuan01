@@ -97,7 +97,7 @@ const rectangle = new Rectangle(20, 15);
 
 
 
-// Create a class BankAccount with balance. Add methods deposit() and withdraw().
+// 5. Create a class BankAccount with balance. Add methods deposit() and withdraw().
 class BankAccount {
     balance: number;
 
@@ -144,7 +144,33 @@ class User {
     }
 }
 const user = new User("Xuan Ho");
-console.log("User Name: " + user.getName());
+// console.log("User Name: " + user.getName());
+
+// 8. Create a Product class with name, price. Create an array of products and filter products with
+// price > 100.
+class Product {
+    name: string;
+    price: number;
+
+    constructor(name: string, price: number) {
+        this.name = name;
+        this.price = price;
+    }
+
+}
+function getProductsGetterThan100(products: Array<Product>): Array<Product> {
+    return products.filter(product => product.price > 100);
+}
+const products = [
+    new Product("Iphone", 2000),
+    new Product("Snack", 50),
+    new Product("Laptop", 1000),
+    new Product("Keyboard", 90),
+    new Product("ETS", 100),
+    new Product("Lecture", 500),
+]
+console.log(getProductsGetterThan100(products));
+
 
 
 
