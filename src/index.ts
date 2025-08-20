@@ -124,7 +124,27 @@ class BankAccount {
 const account = new BankAccount(1000);
 account.deposit(500);
 account.withdraw(200);
-console.log("Current Balance: " + account.showBalance());
+// console.log("Current Balance: " + account.showBalance());
+
+
+// 7. Write a class User with private property name and getter/setter.
+class User {
+    private name: string;
+
+    constructor(name: string) {
+        this.name = name;
+    }
+
+    getName(): string {
+        return this.name;
+    }
+
+    setName(name: string): void {
+        this.name = name;
+    }
+}
+const user = new User("Xuan Ho");
+console.log("User Name: " + user.getName());
 
 
 
