@@ -409,6 +409,31 @@ class AnimalPolymorphism {
     }
 }
 
+// 20. Write a Vehicle interface and implement it in Car and Bike classes.
+interface Vehicle {
+    start(): string;
+    stop(): string;
+}
+class CarVehicle implements Vehicle {
+    start(): string {
+        return "Car is starting.";
+    }
+
+    stop(): string {
+        return "Car is stopping.";
+    }
+}
+class BikeVehicle implements Vehicle {
+    start(): string {
+        return "Bike is starting.";
+    }
+
+    stop(): string {
+        return "Bike is stopping.";
+    }
+}
+
+
 
 
 
