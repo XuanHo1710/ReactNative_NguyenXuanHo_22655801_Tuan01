@@ -292,6 +292,32 @@ class Circle extends Shape {
     }
 }
 
+// 14. Create a base class Employee. Extend Manager and Developer with specific methods.
+class Employee {
+    name: string;
+    position: string;
+
+    constructor(name: string, position: string) {
+        this.name = name;
+        this.position = position;
+    }
+
+    displayInfo(): string {
+        return `Name: ${this.name}, Position: ${this.position}`;
+    }
+}
+class Manager extends Employee {
+    manage(): string {
+        return `${this.name} is managing the team.`;
+    }
+}
+class Developer extends Employee {
+    code(): string {
+        return `${this.name} is coding.`;
+    }
+}
+
+
 
 
 
